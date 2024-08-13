@@ -1,0 +1,56 @@
+\documentclass[12pt]{report}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{lipsum}
+\graphicspath{ {images/} }
+
+
+\title{
+	{Thesis Title}\\
+	{\large Institution Name}\\
+	{\includegraphics{university.png}}
+}
+\author{Author Name}
+\date{Day Month Year}
+
+\begin{document}
+	
+\maketitle
+
+\chapter*{Abstract}	
+\lipsum[1]
+
+
+\chapter*{Dedication}
+To wife/husband/mom/dad/kids ...
+
+\chapter*{Declartion}
+I declare that ...
+
+\chapter*{Acknowledgements}
+I want to thank .... 
+
+%sometimes need to compile more than once
+\tableofcontents
+
+%Chapter 1: Introduction
+%\include{chapters/introduction.tex} % dont use .tex
+\include{chapters/introduction}
+
+%Chapter 2: Literature Review
+\include{chapters/chapter02}
+
+%Add more chapter for practice
+%also section and subsection or subsubsection
+%
+%
+
+%Appendix
+\include{chapter/appendix}
+
+
+
+	
+\end{document}
+
+
