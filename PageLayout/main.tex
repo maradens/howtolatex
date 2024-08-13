@@ -1,0 +1,80 @@
+\documentclass[12pt,twoside]{report}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{lipsum}
+\graphicspath{ {images/} }
+%even and odd pages different
+%\usepackage[a4paper,width=150mm,top=25mm,bottom=25mm]{geometry}
+%binding offset
+\usepackage[a4paper,width=150mm,top=25mm,bottom=25mm,bindingoffset=6mm]{geometry}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+%custumize fancy header  with new command
+\fancyhead{} % clear the command
+\fancyhead[RO,LE]{Thesis Title} % Right Odd, Left Even
+\fancyfoot{} % clear the command
+\fancyfoot[LE,RO]{\thepage} %Left Even, Right Odd, page number
+\fancyfoot[LO,CE]{Chapter \thechapter} % Left Odd, Center Even, chapter
+%\fancyfoot[LO,CE]{\rightmark} % try leftmark and rightmark
+\fancyfoot[CO,RE]{Author Name}
+%change lines thickness
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0.4pt}
+
+
+\title{
+	{Thesis Title}\\
+	{\large Institution Name}\\
+	{\includegraphics{university.png}}
+}
+\author{Author Name}
+\date{Day Month Year}
+
+\begin{document}
+	
+\maketitle
+
+\chapter*{Abstract}	
+\lipsum[1]
+
+
+\chapter*{Dedication}
+To wife/husband/mom/dad/kids ...
+
+\chapter*{Declartion}
+I declare that ...
+
+\chapter*{Acknowledgements}
+I want to thank .... 
+
+%sometimes need to compile more than once
+\tableofcontents
+
+%Chapter 1: Introduction
+%\include{chapters/introduction.tex} % dont use .tex
+\include{chapters/introduction}
+%change the page style if necessary
+%\pagestyle{empty} % clear header and footer
+%\pagestyle{plain} % only page number
+
+%Chapter 2: Literature Review
+\include{chapters/chapter02}
+
+%Chapter 3: Methodology
+%\pagestyle{fancy} % return to fancy header and footer
+\include{chapters/chapter03}
+
+%Add more chapter for practice
+%also section and subsection or subsubsection
+%
+%
+
+%Appendix
+\include{chapter/appendix}
+
+
+
+	
+\end{document}
+
+
